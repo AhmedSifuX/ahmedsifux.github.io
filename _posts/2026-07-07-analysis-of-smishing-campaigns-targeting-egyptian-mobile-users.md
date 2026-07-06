@@ -16,6 +16,8 @@ title: Analysis of Smishing Campaigns Targeting Egyptian Mobile Users
 
 # Analysis of Smishing Campaigns Targeting Egyptian Mobile Users
 
+![SMS EXAMPLE](/assets/images/posts/smishing-campaign/Screenshot_10.jpg)
+
 Smishing (SMS Phishing) continues to be one of the most effective social
 engineering techniques because it targets users through a communication
 channel they generally trust. Recent campaigns targeting Egyptian users
@@ -134,6 +136,14 @@ phishing operations.
 ------------------------------------------------------------------------
 
 # Indicators of Compromise
+
+![IOC1](/assets/images/posts/smishing-campaign/image2.png)
+
+![IOC2](/assets/images/posts/smishing-campaign/image3.png)
+
+![IOC3](/assets/images/posts/smishing-campaign/image4.png)
+
+![IOC4](/assets/images/posts/smishing-campaign/image5.png)
 
 ## IP Addresses
 
