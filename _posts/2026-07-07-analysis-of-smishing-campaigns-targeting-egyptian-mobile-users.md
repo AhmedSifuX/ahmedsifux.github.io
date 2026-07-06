@@ -123,18 +123,6 @@ phishing operations.
 
 ------------------------------------------------------------------------
 
-# MITRE ATT&CK Mapping
-
-  Tactic              Technique                         Purpose
-  ------------------- --------------------------------- ------------------------
-  Initial Access      T1660 -- Phishing                 Malicious SMS
-  Defense Evasion     T1655 -- Masquerading             Fake Brands
-  Credential Access   T1417 -- Input Capture            Collect Sensitive Data
-  Exfiltration        T1646 -- Exfiltration over C2     Send Stolen Data
-  Impact              T1640 -- Account Access Removal   Financial Impact
-
-------------------------------------------------------------------------
-
 # Indicators of Compromise
 
 ![IOC1](/assets/images/posts/smishing-campaign/image2.png)
